@@ -33,16 +33,32 @@ public:
     vector<Vertice*> grafo;
 
     
-    void criargrafo (Readfile *file);
+    void criargrafo (Readfile *file);   
 
     
-    void destruirgrafo ();
-
-
-    void BronKerbosh ();
+    void destruirgrafo ();  
 
 
     void printgrafo ();
+
+
+    void printgrau ();
+};
+
+
+class Clique
+{
+public:
+    vector<vector<int>> subgrafos;
+
+
+    void adicionarclique ();
+};
+
+
+class BronKerbosh 
+{
+    
 };
 
 

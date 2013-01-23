@@ -12,14 +12,15 @@
 int main ()
 {
     Readfile a;
+    Grafo golfinho;
+
     a.openfile ();
     a.readfile ();
-
-    Grafo golfinho;
-    golfinho.criargrafo (&a);
-    golfinho.printgrafo (&a);
-
     a.closefile ();
+
+    golfinho.criargrafo (&a);
+    golfinho.printgrau ();
+    golfinho.destruirgrafo ();
 
     return 0;
 }

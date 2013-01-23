@@ -23,7 +23,6 @@ void Grafo::criargrafo (Readfile *file)
     // Criacao das arestas
     for (; i < 2*sizes[2] + 2; i += 2)
     {
-        cout << "i = " << i << "\n";
         // Subtrai-se - 1 pois os valores reais nao correspondem a posiçao no vetor
         grafo[file->filecontent[i] - 1]->vizinhos.push_back (file->filecontent[i + 1] - 1);
         //(*grafos[(*file).filecontent[i] - 1]).vizinhos.push_back((*file)filecontent[i+1] - 1);
@@ -35,27 +34,32 @@ void Grafo::criargrafo (Readfile *file)
 
 void Grafo::destruirgrafo ()
 {
-
+    for (int i = 0; i < this->sizes[0]; i++)
+    {
+        delete grafo[i];
+    }
 }
 
 
-void Grafo::BronKerbosh ()
-{
-
-}
-
-
-void Grafo::printgrafo (Readfile *file)
+void Grafo::printgrafo ()
 {
     for(int i = 0; i < sizes[0]; i++)
     {
-        cout << "Vertice: " << i << " | Vizinhos: ";
+        cout << "Vertice: " << (i+1) << " | Vizinhos: ";
         for (int j = 0; j < grafo[i]->vizinhos.size (); j++)
         {
-            cout << " " << grafo[i]->vizinhos[j];
+            cout << " " << grafo[i]->vizinhos[j] + 1;
         }
         cout << "\n"; 
     }
 }
 
 
+void Grafo::printgrau ()
+{
+    cout << "GRAU DOS VERTICES:\n\n";
+    for(int i = 0; i < sizes[0]; i++)
+    {
+        cout << "Vertice: " << (i+1) << "\tNum Vizinhos: " << grafo[i]->vizinhos.size () << endl;   
+    }
+}
