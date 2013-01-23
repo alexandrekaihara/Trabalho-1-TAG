@@ -47,19 +47,24 @@ void graphviz::generateordenation (vector<Materia*> ordenacao)
 {
     string_cvt cvt;
     string script = "digraph G {\n";
-           script +=     "subgraph ordenacao\n";
-           script +=     "{\n";
-           script +=         "node [style=filled,color=lightgrey];\n";
+    script += "rankdir = LR;\n";
     
-    for (int i = 0; i < ordenacao.size (); i++) 
+    for(int j = 0; j < 20; j++)
     {
-        script += cvt.num_str (ordenacao[i]->codigo);
-        //script += ordenacao[i]->nome;
-        if (i != ordenacao.size()-1)
-            script += " -> ";
+        
+        script += "subgraph ordenacao\n";
+        script += "{\n";
+        script += "node [style=filled,color=lightgrey];\n";
+        
+        for (int i = 0; i < ordenacao.size (); i++) 
+        {
+            script += cvt.num_str (ordenacao[i]->codigo);
+            //script += ordenacao[i]->nome;
+            if (i != ordenacao.size()-1)
+                script += " -> ";
+        }
+        script += "[color=white, style=dotted];\n}\n";
     }
-
-    script += "[color=red, style=dotted];\n}\n";
 
     for(int i = 0; i < ordenacao.size (); i++)
     {
@@ -83,5 +88,4 @@ void graphviz::generateordenation (vector<Materia*> ordenacao)
     myfile.open("ordenacao.gv");
     myfile << script;
     myfile.close();
-
 }
