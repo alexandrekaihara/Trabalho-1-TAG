@@ -3,17 +3,23 @@
  * \author Alexandre Mitsuru Kaihara e Felipe Fod�o da Matem�tica
  * \since 22/08/19
  */
-#include "golfinho.h"
+// Diretiva de compilação: g++ -std=c++11 -o main main.cpp golfinho.cpp grafos.cpp
 #include "grafos.h"
+#include "readfiles.h"
 #include <iostream>
 #include <fstream>
 
 int main ()
 {
-    criargrafo a;
+    Readfile a;
     a.openfile ();
     a.readfile ();
-    cout << "Oi" << a.inFile;
+
+    for(int i = 0; i < a.filecontent.size (); i++)
+    {
+        cout << a.filecontent[i] << endl;
+    }
 
     return 0;
 }
+

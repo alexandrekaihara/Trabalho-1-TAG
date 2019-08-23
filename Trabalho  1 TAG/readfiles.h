@@ -1,10 +1,10 @@
-/** \file golfinho.cpp
+/** \file readfiles.h
  * \brief Arquivo com a implementa��o da gera��o dos v�rtices do grafo a partir do arquivo .mtx
  * \author Alexandre Mitsuru Kaihara e Felipe Fod�o da Matem�tica
  * \since 22/08/19
  */
-#ifndef GOLFINHO_CPP_INCLUDED
-#define GOLFINHO_CPP_INCLUDED
+#ifndef READFILES_CPP_INCLUDED
+#define READFILES_CPP_INCLUDED
 
 #include <iostream>
 #include <fstream>
@@ -14,29 +14,20 @@
 using namespace std;
 
 
-class golfinho
+class Readfile
 {
 public:
-    double aglom;
+    ifstream    inFile;
 
-    vector<int> vizinhos;
-};
-
-
-class criargrafo
-{
-public:
-    ifstream inFile;
-
-    string content;
+    vector<int> filecontent;
 
 
-    void openfile ();
+    bool openfile ();
 
 
-    void readfile();
+    void readfile ();
 
-    //bool learquivo (golfinho grafo);
+
 };
 
 
