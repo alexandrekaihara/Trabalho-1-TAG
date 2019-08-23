@@ -9,27 +9,35 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-
+#include <string>
 
 using namespace std;
 
 
 class golfinho
 {
+public:
     double aglom;
 
     vector<int> vizinhos;
-}
+};
 
 
 class criargrafo
 {
-    ifstream openfile();
+public:
+    ifstream inFile;
+
+    string content;
 
 
+    void openfile ();
 
 
-}
+    void readfile();
+
+    //bool learquivo (golfinho grafo);
+};
 
 
 #endif
