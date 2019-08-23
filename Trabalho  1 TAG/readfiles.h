@@ -28,6 +28,7 @@ public:
     void readfile ();
 
 
+    void closefile ();
 };
 
 

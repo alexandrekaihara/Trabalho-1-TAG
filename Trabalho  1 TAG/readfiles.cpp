@@ -31,3 +31,9 @@ void Readfile::readfile ()
         filecontent.push_back (stoi(temp, &sz, 10));
     }
 }
+
+
+void Readfile::closefile ()
+{
+    inFile.close ();
+}

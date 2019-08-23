@@ -6,6 +6,7 @@
 #ifndef GRAFOS_H_INCLUDED
 #define GRAFOS_H_INCLUDED
 
+#include "readfiles.h"
 #include <fstream>
 #include <vector>
 #include <iostream>
@@ -15,19 +16,31 @@
 using namespace std;
 
 
-class grafo
-{
-
-
-}
-
-
-class vertice
+class Vertice
 {
 public:
     double aglom;
 
     vector<int> vizinhos;
 };
+
+
+class Grafo
+{
+public:
+    vector<int> sizes;
+
+    vector<Vertice> grafo;
+
+    
+    void criargrafo (Readfile *file);
+
+
+    void BronKerbosh ();
+
+
+    void destruirgrafo ();
+};
+
 
 #endif

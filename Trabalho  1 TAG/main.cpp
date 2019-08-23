@@ -3,7 +3,7 @@
  * \author Alexandre Mitsuru Kaihara e Felipe Fod�o da Matem�tica
  * \since 22/08/19
  */
-// Diretiva de compilação: g++ -std=c++11 -o main main.cpp golfinho.cpp grafos.cpp
+// Diretiva de compilação: g++ -std=c++11 -o main main.cpp readfiles.cpp grafos.cpp
 #include "grafos.h"
 #include "readfiles.h"
 #include <iostream>
@@ -19,6 +19,8 @@ int main ()
     {
         cout << a.filecontent[i] << endl;
     }
+
+    a.closefile ();
 
     return 0;
 }

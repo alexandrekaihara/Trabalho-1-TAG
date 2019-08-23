@@ -6,22 +6,37 @@
 #include "grafos.h"
 
 
-//bool criargrafo (golfinho grafo)
-//{
-//    int sizes[3];
-//    for (int i = 0; i < 2; i++)
-//    {
-//       
-//    }
-//    int qtd_v;
-//    cin >> qtd_v;
-//   for(int i = 0; i < qtd_v; i++){
-//
-//    }
-//    int a, b;
-//    for(int i = 0; i < 10; i++){
-//       cin >> a >> b;
-//        grafo[a].vizinhos.push_back(b);
-//        grafo[b].vizinhos.push_back(a);
-//    }
-//}
+void Grafo::criargrafo (Readfile *file)
+{
+    int i;
+    // Leitura do tamanho do grafo
+    for (i = 0; i < 2; i++)
+    {
+        sizes.push_back (file->filecontent[i]);
+    }
+
+    // Alocacao dinamica dos vertices
+    for(int j = 0; j < sizes[0]; j++)
+    {
+       //grafo.push_back(new Vertice);
+    }
+
+    // Criacao das arestas
+    for (; i < (sizes[2] + sizeof(sizes)); i++)
+    {
+
+    }
+
+}
+
+
+void Grafo::BronKerbosh ()
+{
+
+}
+
+
+void Grafo::destruirgrafo ()
+{
+
+}
