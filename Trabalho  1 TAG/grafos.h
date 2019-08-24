@@ -30,16 +30,19 @@ class Grafo
 public:
     vector<int> sizes;
 
-    vector<Vertice> grafo;
+    vector<Vertice*> grafo;
 
     
     void criargrafo (Readfile *file);
+
+    
+    void destruirgrafo ();
 
 
     void BronKerbosh ();
 
 
-    void destruirgrafo ();
+    void printgrafo ();
 };
 
 

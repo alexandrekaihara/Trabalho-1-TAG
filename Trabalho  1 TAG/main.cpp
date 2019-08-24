@@ -15,10 +15,9 @@ int main ()
     a.openfile ();
     a.readfile ();
 
-    for(int i = 0; i < a.filecontent.size (); i++)
-    {
-        cout << a.filecontent[i] << endl;
-    }
+    Grafo golfinho;
+    golfinho.criargrafo (&a);
+    golfinho.printgrafo (&a);
 
     a.closefile ();
 

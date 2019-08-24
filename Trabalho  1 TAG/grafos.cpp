@@ -10,22 +10,29 @@ void Grafo::criargrafo (Readfile *file)
 {
     int i;
     // Leitura do tamanho do grafo
-    for (i = 0; i < 2; i++)
+    for (i = 0; i < 3; i++)
     {
         sizes.push_back (file->filecontent[i]);
     }
-
+    
     // Alocacao dinamica dos vertices
     for(int j = 0; j < sizes[0]; j++)
     {
-       //grafo.push_back(new Vertice);
+        grafo.push_back (new Vertice);
     }
 
     // Criacao das arestas
-    for (; i < (sizes[2] + sizeof(sizes)); i++)
+    for (; i < sizes[2]; i = i + 2)
     {
-
+        // Subtrai-se - 1 pois os valores reais nao correspondem a posiçao no vetor
+        grafo[file->filecontent[i] - 1]->vizinhos.push_back (file->filecontent[i + 1] - 1);
+        grafo[file->filecontent[i + 1] - 1]->vizinhos.push_back (file->filecontent[i] - 1);
     }
+}
+
+
+void Grafo::destruirgrafo ()
+{
 
 }
 
@@ -36,7 +43,16 @@ void Grafo::BronKerbosh ()
 }
 
 
-void Grafo::destruirgrafo ()
+void Grafo::printgrafo ()
 {
-
+    for(int i = 0; i < sizes[0]; i++)
+    {
+        cout << "Vertice: " << i << "Vizinhos: ";
+        for (int j = 0; j < grafo.size (); j++)
+        {
+            cout << " " << grafo[i]->vizinhos[j];
+        } 
+    }
 }
+
+
