@@ -4,7 +4,6 @@
  * \since 22/08/19
  */
 #include "grafos.h"
-#include <algorithm>
 
 
 void Grafo::criargrafo (Readfile *file)
@@ -65,14 +64,17 @@ void Grafo::printgrau ()
 
 void Grafo::findmaximalclique ()
 {
+    // Iniciando o vetor P com todos os vértices do grafo
     vector<int> r, p, x;
     for(int i = 0; i < grafo.size(); i++)
         p.push_back(i);
+
     bronkerbosch(r, p, x);
 }
 
 void Grafo::bronkerbosch (vector<int> &r, vector<int> &p, vector<int> &x)
 {
+    // Para debugação. Imprime os vetores R, P e X na chamada atual.
     cout << "Instanciação iniciada.\n";
     cout << "R: ";
     for(int i  = 0; i < r.size(); i++)
@@ -84,22 +86,35 @@ void Grafo::bronkerbosch (vector<int> &r, vector<int> &p, vector<int> &x)
     for(int i  = 0; i < x.size(); i++)
         cout << x[i] << " ";
     cout << "\n\n";
-    if(p.size() == 0 && x.size() == 0){
-        cout << "Maximal Clique found: R" << endl;
+
+    // 
+    if(p.empty() && x.empty()){
+        cout << "Clique maximal encontrado: R" << endl;
         for(int i = 0; i < r.size(); i++)
             cout << r[i] << " ";
         cout << endl;
         return;
     }
     for(int i = 0; i < p.size(); i++){
-        vector<int> r1 = r, p1(sizes[0]), x1(sizes[0]);
+        vector<int> r1 = r, p1, x1;
+
+        // Novo R
         r1.push_back(p1[i]);
-        vector<int>::iterator it;
-        it = std::set_intersection(p.begin(), p.end(), grafo[i]->vizinhos.begin(), grafo[i]->vizinhos.end(), p1);
-        p1.resize(it - p1.begin());
-        it = std::set_intersection(x.begin(), x.end(), grafo[i]->vizinhos.begin(), grafo[i]->vizinhos.end(), x1);
-        x1.resize(it - x1.begin());
+
+        // Novo P
+        for(int k = 0; k < p.size(); k++)
+            for(int l = 0; l < grafo[k]->vizinhos.size(); l++)
+                if(p[k] == grafo[k]->vizinhos[l])
+                    p1.push_back(k);
+
+        // Novo X
+        for(int k = 0; k < x.size(); k++)
+            for(int l = 0; k < grafo[k]->vizinhos.size(); l++)
+                if(x[k] == grafo[k]->vizinhos[l])
+                    x1.push_back(k);
+
         bronkerbosch(r1, p1, x1);
+
         p1.erase(p.begin() + i, p.begin() + i);
         for(int j = 0; j < x1.size(); j++)
             if(x1[j] == p1[i]){
