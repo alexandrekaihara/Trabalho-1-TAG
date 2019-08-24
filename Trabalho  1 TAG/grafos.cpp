@@ -68,17 +68,17 @@ void Grafo::printgrau ()
 void Grafo::findmaximalclique ()
 {
     // Iniciando o vetor P com todos os vértices do grafo
-    vector<int> r, p, x;
-    for(int i = 0; i < grafo.size(); i++)
-        p.push_back(i);
-
+    vector<int> r, p(62), x;
+    for(int i = 0; i < sizes[0]; i++)
+        p[i] = i;
     bronkerbosch(r, p, x);
 }
 
 
 void Grafo::bronkerbosch (vector<int> &r, vector<int> &p, vector<int> &x)
 {
-    // Para debugação. Imprime os vetores R, P e X na chamada atual.
+    // Para debugação. Imprime os vetores R, P e X na chamada atual. 
+    /*
     cout << "Instanciação iniciada.\n";
     cout << "R: ";
     for(int i  = 0; i < r.size(); i++)
@@ -90,10 +90,10 @@ void Grafo::bronkerbosch (vector<int> &r, vector<int> &p, vector<int> &x)
     for(int i  = 0; i < x.size(); i++)
         cout << x[i] << " ";
     cout << "\n\n";
-
+    */
     // 
     if(p.empty() && x.empty()){
-        cout << "Clique maximal encontrado: R" << endl;
+        cout << "Clique maximal encontrado:" << endl;
         for(int i = 0; i < r.size(); i++)
             cout << r[i] << " ";
         cout << endl;
@@ -101,15 +101,16 @@ void Grafo::bronkerbosch (vector<int> &r, vector<int> &p, vector<int> &x)
     }
     for(int i = 0; i < p.size(); i++){
         vector<int> r1 = r, p1, x1;
-
         // Novo R
-        r1.push_back(p1[i]);
+        r1.push_back(p[i]);
 
         // Novo P
-        for(int k = 0; k < p.size(); k++)
-            for(int l = 0; l < grafo[k]->vizinhos.size(); l++)
+        for(int k = 0; k < p.size(); k++){
+            for(int l = 0; l < grafo[k]->vizinhos.size(); l++){
                 if(p[k] == grafo[k]->vizinhos[l])
                     p1.push_back(k);
+            }
+        }
 
         // Novo X
         for(int k = 0; k < x.size(); k++)
