@@ -19,6 +19,8 @@ using namespace std;
 class Vertice
 {
 public:
+    int v3cliques;
+
     double aglom;
 
     vector<int> vizinhos;
@@ -65,6 +67,9 @@ public:
 
 
     void printcliques ();
+
+
+    void findv3cliques (Grafo a);    
 };
 
 

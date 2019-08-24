@@ -31,6 +31,12 @@ int main ()
     b.adicionarclique (v);
 
     b.printcliques ();
+    b.findv3cliques (golfinho);
+
+    for (int i = 0; i < 3; i++)
+    {
+        cout << "numero de cliques v3 " << golfinho.grafo[b.subgrafos[1][i]]->v3cliques << endl;
+    }
 
     return 0;
 }

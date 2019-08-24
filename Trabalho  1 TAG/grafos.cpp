@@ -159,3 +159,23 @@ void Clique::printcliques ()
         cout << "\n";
     }
 }
+
+
+void Clique::findv3cliques (Grafo a)
+{
+    for (int i = 0; i < a.grafo.size (); i++)
+    {
+        a.grafo[i]->v3cliques = 0;
+    }
+
+    for (int i = 0; i < subgrafos.size (); i++)
+    {
+        if (subgrafos[i].size () == 3)
+        {
+            for (int j = 0; j < 3; j++)
+            {   
+                a.grafo[subgrafos[i][j]]->v3cliques += 1;
+            }
+        }
+    }
+}
