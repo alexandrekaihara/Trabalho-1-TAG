@@ -58,13 +58,13 @@ public:
 class Clique
 {
 public:
-    vector<vector<int>*> subgrafos;
+    vector<vector<int>> subgrafos;
 
 
     void adicionarclique (vector<int> clique);
 
 
-    void destruircliques ();
+    void printcliques ();
 };
 
 

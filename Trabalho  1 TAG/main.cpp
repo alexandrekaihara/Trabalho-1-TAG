@@ -13,6 +13,7 @@ int main ()
 {
     Readfile a;
     Grafo golfinho;
+    Clique b;
 
     a.openfile ();
     a.readfile ();
@@ -21,7 +22,16 @@ int main ()
     golfinho.criargrafo (&a);
     golfinho.printgrau ();
     golfinho.destruirgrafo ();
-    golfinho.findmaximalclique ();
+    //golfinho.findmaximalclique ();
+
+    std::vector<int> v{2,5,8,11,14};
+    b.adicionarclique (v);
+
+    v = {1,2,3};
+    b.adicionarclique (v);
+
+    b.printcliques ();
+
     return 0;
 }
 

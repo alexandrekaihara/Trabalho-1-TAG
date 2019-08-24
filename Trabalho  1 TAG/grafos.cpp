@@ -140,19 +140,22 @@ int Grafo::getindex (Vertice* vert) // Só serve pra debugar, vou apagar ela dep
 
 void Clique::adicionarclique (vector<int> clique)
 {
-    vector<int> *temp = new vector<int>;
-
-    for (int i = 0; i < clique.size (); i++)
-        temp->push_back (move (clique[i]));
-    
-    subgrafos.push_back (temp);
+    subgrafos.push_back (clique);
 }
 
 
-void Clique::destruircliques ()
+void Clique::printcliques ()
 {
+    cout << "Cliques maximais: \n\n";
     for (int i = 0; i < subgrafos.size (); i++)
     {
-        delete subgrafos[i];
+        cout << "Numero de Vertices: " << subgrafos[i].size () << "\tVertices: "; 
+       
+        for(int j = 0; j < subgrafos[i].size (); j++)
+        {
+            cout << subgrafos[i][j] << " ";
+        }
+       
+        cout << "\n";
     }
 }
