@@ -43,6 +43,15 @@ public:
 
 
     void printgrau ();
+
+
+    void findmaximalclique ();
+
+
+    void bronkerbosch (vector<int> &r, vector<int> &p, vector<int> &x);
+
+
+    int getindex (Vertice* vert);
 };
 
 
@@ -52,13 +61,7 @@ public:
     vector<vector<int>> subgrafos;
 
 
-    void adicionarclique ();
-};
-
-
-class BronKerbosh 
-{
-    
+    void adicionarclique (vector<int> clique);
 };
 
 

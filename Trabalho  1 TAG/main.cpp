@@ -21,7 +21,7 @@ int main ()
     golfinho.criargrafo (&a);
     golfinho.printgrau ();
     golfinho.destruirgrafo ();
-
+    golfinho.findmaximalclique ();
     return 0;
 }
 
