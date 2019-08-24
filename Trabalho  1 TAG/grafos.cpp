@@ -141,6 +141,18 @@ int Grafo::getindex (Vertice* vert) // Só serve pra debugar, vou apagar ela dep
 void Clique::adicionarclique (vector<int> clique)
 {
     vector<int> *temp = new vector<int>;
-    //temp->push_back (move (clique));
-    //subgrafos.push_back (temp);
+
+    for (int i = 0; i < clique.size (); i++)
+        temp->push_back (move (clique[i]));
+    
+    subgrafos.push_back (temp);
+}
+
+
+void Clique::destruircliques ()
+{
+    for (int i = 0; i < subgrafos.size (); i++)
+    {
+        delete subgrafos[i];
+    }
 }
