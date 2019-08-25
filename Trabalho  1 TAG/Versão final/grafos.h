@@ -1,6 +1,6 @@
 /** \file grafos.h
- * \brief Arquivo com a implementa��o da gera��o dos v�rtices do grafo a partir do arquivo .mtx
- * \author Alexandre Mitsuru Kaihara e Felipe Fod�o da Matem�tica
+ * \brief Arquivo com a biblioteca de funcoes de manutencao do grafo
+ * \author Alexandre Mitsuru Kaihara e Felipe Xavier Barbosa da Silva
  * \since 22/08/19
  */
 #ifndef GRAFOS_H_INCLUDED
@@ -15,31 +15,27 @@
 
 using namespace std;
 
-
+// Cada objeto dessa classe representa um vertice no grafo
 class Vertice
 {
 public:
     vector<int> vizinhos;
 };
 
-
+// Classe utilizada para realizar operacoes com o grafo lido
 class Grafo
 {
 public:
+    // O tamanho do grafo e a quantidade de conexoes nele sao armazenadas em sizes
+    // trios armazena a quantidade de triangulos fechados que cada vertice tem
     vector<int> sizes;
     vector<int> trios;
 
     vector<Vertice*> grafo;
 
     
-    void criargrafo (Readfile *file);   
-
+    void criargrafo (Readfile *file);  
     
-    void destruirgrafo ();  
-
-
-    void printgrafo ();
-
 
     void printgrau ();
 
@@ -48,9 +44,6 @@ public:
 
 
     void bronkerbosch (vector<int> &r, vector<int> &p, vector<int> &x);
-
-
-    int getindex (Vertice* vert);
 
 
     void intersection (vector<int> &vet, vector<int> &vizinhos, vector<int> &ans);

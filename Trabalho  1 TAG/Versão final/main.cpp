@@ -1,6 +1,6 @@
 /** \file golfinho.cpp
  * \brief Arquivo Principal
- * \author Alexandre Mitsuru Kaihara e Felipe Fod�o da Matem�tica
+ * \author Alexandre Mitsuru Kaihara e Felipe Xavier Barbosa da Silva
  * \since 22/08/19
  */
 // Diretiva de compilação: g++ -std=c++11 -o main main.cpp readfiles.cpp grafos.cpp
@@ -14,15 +14,17 @@ int main ()
     Readfile a;
     Grafo golfinho;
 
-    a.openfile ();
+    // Le as informacoes do arquivo e as transfere para um grafo da classe Grafo
+    if(!a.openfile ())
+        return 0;
     a.readfile ();
     a.closefile ();
     golfinho.criargrafo (&a);
-    golfinho.printgrafo ();
-    //golfinho.destruirgrafo ();
-    golfinho.findmaximalclique ();
-    golfinho.triosf ();
-    golfinho.aglom ();
+
+    golfinho.printgrau (); // Imprime os graus de cada vertice
+    golfinho.findmaximalclique (); // Imprime os cliques maximais
+    golfinho.triosf (); // Calcula os indices de aglomeracao
+    golfinho.aglom (); // Imprime o sindices de aglomeracao
 
     return 0;
 }

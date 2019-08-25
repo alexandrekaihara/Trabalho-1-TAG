@@ -1,3 +1,5 @@
+What is happening wtf
+What is happening wtf
 Vertice: 1 | Vizinhos:  11 15 16 41 43 48
 Vertice: 2 | Vizinhos:  18 20 27 28 29 37 42 55
 Vertice: 3 | Vizinhos:  11 43 45 62
