@@ -52,6 +52,8 @@ public:
 
 
     int getindex (Vertice* vert);
+
+    void intersection(vector<int> &vet, vector<int> &vizinhos, vector<int> &ans);
 };
 
 

@@ -4,6 +4,7 @@
  * \since 22/08/19
  */
 #include "grafos.h"
+#include <algorithm>
 
 
 void Grafo::criargrafo (Readfile *file)
@@ -68,7 +69,7 @@ void Grafo::printgrau ()
 void Grafo::findmaximalclique ()
 {
     // Iniciando o vetor P com todos os vértices do grafo
-    vector<int> r, p(62), x;
+    vector<int> r, p(sizes[0]), x;
     for(int i = 0; i < sizes[0]; i++)
         p[i] = i;
     bronkerbosch(r, p, x);
@@ -87,45 +88,27 @@ void Grafo::bronkerbosch (vector<int> &r, vector<int> &p, vector<int> &x)
     for(int i  = 0; i < p.size(); i++)
         cout << p[i] << " ";
     cout << "\nX: ";
-    for(int i  = 0; i < x.size(); i++)
+    for(int i = 0; i < x.size(); i++)
         cout << x[i] << " ";
     cout << "\n\n";
-    */
-    // 
+    // */
+    
     if(p.empty() && x.empty()){
-        cout << "Clique maximal encontrado:" << endl;
+        cout << "Clique maximal encontrado: ";
         for(int i = 0; i < r.size(); i++)
             cout << r[i] << " ";
         cout << endl;
         return;
     }
+    
     for(int i = 0; i < p.size(); i++){
         vector<int> r1 = r, p1, x1;
-        // Novo R
-        r1.push_back(p[i]);
-
-        // Novo P
-        for(int k = 0; k < p.size(); k++){
-            for(int l = 0; l < grafo[k]->vizinhos.size(); l++){
-                if(p[k] == grafo[k]->vizinhos[l])
-                    p1.push_back(k);
-            }
-        }
-
-        // Novo X
-        for(int k = 0; k < x.size(); k++)
-            for(int l = 0; k < grafo[k]->vizinhos.size(); l++)
-                if(x[k] == grafo[k]->vizinhos[l])
-                    x1.push_back(k);
-
+        r1.push_back(p[0]);
+        intersection(p, grafo[p[0]]->vizinhos, p1);
+        intersection(x, grafo[p[0]]->vizinhos, x1);
         bronkerbosch(r1, p1, x1);
-
-        p1.erase(p.begin() + i, p.begin() + i);
-        for(int j = 0; j < x1.size(); j++)
-            if(x1[j] == p1[i]){
-                x1.erase(x1.begin() + j, x1.begin() + j);
-                break;
-            }
+        p.erase(p.begin());
+        x.push_back(p[0]);
     }
 }
 
@@ -136,6 +119,13 @@ int Grafo::getindex (Vertice* vert) // Só serve pra debugar, vou apagar ela dep
         if(vert == grafo[i])
             return i;
     return -1;
+}
+
+void Grafo::intersection(vector<int> &vet, vector<int> &vizinhos, vector<int> &ans){
+    for(int i = 0; i < vet.size(); i++)
+        for(int j = 0; j < vizinhos.size(); j++)
+            if(vet[i] == vizinhos[j])
+                ans.push_back(vet[i]);
 }
 
 

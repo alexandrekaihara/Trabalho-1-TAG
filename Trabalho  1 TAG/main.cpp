@@ -18,11 +18,10 @@ int main ()
     a.openfile ();
     a.readfile ();
     a.closefile ();
-
     golfinho.criargrafo (&a);
-    golfinho.printgrau ();
-    golfinho.destruirgrafo ();
-    //golfinho.findmaximalclique ();
+    golfinho.printgrafo ();
+    //golfinho.destruirgrafo ();
+    golfinho.findmaximalclique ();
 
     std::vector<int> v{2,5,8,11,14};
     b.adicionarclique (v);
