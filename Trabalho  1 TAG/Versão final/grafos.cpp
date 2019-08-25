@@ -1,6 +1,6 @@
 /** \file grafos.cpp
  * \brief Arquivo com a implementacao da manipulacao do grafo
- * \author 18/ - Alexandre Mitsuru Kaihara
+ * \author 18/0029690 - Alexandre Mitsuru Kaihara
  *         18/0016326 - Felipe Xavier Barbosa da Silva
  * \since 22/08/19
  */
@@ -66,11 +66,12 @@ void Grafo::bronkerbosch (vector<int> &r, vector<int> &p, vector<int> &x)
             cout << r[i] + 1 << " ";
         
         cout << endl;
-        return;
     }
     
-    // Prepara a proxima chamada recursiva do algoritmo
-    for(int i = 0; i < p.size(); i++){
+    
+    // Prepara a proxima chamada recursiva do algorito
+    int tam = p.size();
+    for(int i = 0; i < tam; i++){
         vector<int> r1 = r, p1, x1;
 
         r1.push_back(p[0]); // r1 = r união com p[0] 
@@ -78,9 +79,8 @@ void Grafo::bronkerbosch (vector<int> &r, vector<int> &p, vector<int> &x)
         intersection(x, grafo[p[0]]->vizinhos, x1); // x1 = intersecao de x com vizinhos de p[0]
 
         bronkerbosch(r1, p1, x1);
-
-        p.erase(p.begin()); // Tira p[0] de p e o move para x para que ele nao seja considerado em outros testes de cliques maximais
         x.push_back(p[0]);
+        p.erase(p.begin()); // Tira p[0] de p e o move para x para que ele nao seja considerado em outros testes de cliques maximais
     }
 }
 

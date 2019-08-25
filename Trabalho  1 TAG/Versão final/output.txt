@@ -69,48 +69,54 @@ Numero de Vertices: 3	Vertices: 1 16 41
 Numero de Vertices: 3	Vertices: 2 18 28 
 Numero de Vertices: 3	Vertices: 2 20 55 
 Numero de Vertices: 3	Vertices: 2 27 28 
+Numero de Vertices: 2	Vertices: 2 29 
+Numero de Vertices: 2	Vertices: 2 37 
+Numero de Vertices: 3	Vertices: 2 42 55 
 Numero de Vertices: 3	Vertices: 3 11 43 
-Numero de Vertices: 2	Vertices: 3 43 
+Numero de Vertices: 2	Vertices: 3 45 
+Numero de Vertices: 2	Vertices: 3 62 
 Numero de Vertices: 3	Vertices: 4 9 60 
 Numero de Vertices: 2	Vertices: 4 15 
 Numero de Vertices: 2	Vertices: 5 52 
 Numero de Vertices: 4	Vertices: 6 10 14 58 
-Numero de Vertices: 3	Vertices: 6 14 58 
+Numero de Vertices: 2	Vertices: 6 57 
 Numero de Vertices: 5	Vertices: 7 10 14 18 58 
-Numero de Vertices: 4	Vertices: 7 10 18 58 
-Numero de Vertices: 4	Vertices: 7 14 18 58 
 Numero de Vertices: 4	Vertices: 7 14 55 58 
+Numero de Vertices: 2	Vertices: 7 57 
 Numero de Vertices: 3	Vertices: 8 20 31 
+Numero de Vertices: 3	Vertices: 8 20 55 
 Numero de Vertices: 2	Vertices: 8 28 
-Numero de Vertices: 2	Vertices: 8 31 
+Numero de Vertices: 2	Vertices: 8 41 
 Numero de Vertices: 3	Vertices: 9 21 29 
-Numero de Vertices: 2	Vertices: 9 29 
 Numero de Vertices: 3	Vertices: 9 38 46 
+Numero de Vertices: 3	Vertices: 9 46 60 
 Numero de Vertices: 3	Vertices: 10 14 33 
-Numero de Vertices: 2	Vertices: 10 33 
+Numero de Vertices: 4	Vertices: 10 14 42 58 
 Numero de Vertices: 2	Vertices: 11 30 
-Numero de Vertices: 3	Vertices: 11 43 48 
 Numero de Vertices: 2	Vertices: 12 52 
 Numero de Vertices: 2	Vertices: 13 34 
 Numero de Vertices: 4	Vertices: 14 42 55 58 
 Numero de Vertices: 4	Vertices: 15 17 34 38 
 Numero de Vertices: 4	Vertices: 15 17 34 39 
-Numero de Vertices: 3	Vertices: 15 17 38 
+Numero de Vertices: 4	Vertices: 15 17 34 51 
 Numero de Vertices: 2	Vertices: 15 25 
 Numero de Vertices: 4	Vertices: 15 34 35 38 
 Numero de Vertices: 4	Vertices: 15 34 38 41 
+Numero de Vertices: 4	Vertices: 15 34 38 44 
 Numero de Vertices: 4	Vertices: 15 34 39 44 
+Numero de Vertices: 3	Vertices: 15 39 53 
+Numero de Vertices: 3	Vertices: 15 41 53 
 Numero de Vertices: 4	Vertices: 16 19 25 46 
-Numero de Vertices: 3	Vertices: 16 25 46 
-Numero de Vertices: 2	Vertices: 16 41 
+Numero de Vertices: 3	Vertices: 16 46 60 
+Numero de Vertices: 2	Vertices: 16 56 
 Numero de Vertices: 3	Vertices: 17 21 39 
+Numero de Vertices: 3	Vertices: 17 21 51 
 Numero de Vertices: 2	Vertices: 18 23 
 Numero de Vertices: 3	Vertices: 18 26 28 
+Numero de Vertices: 2	Vertices: 18 32 
 Numero de Vertices: 2	Vertices: 19 21 
 Numero de Vertices: 5	Vertices: 19 22 30 46 52 
-Numero de Vertices: 4	Vertices: 19 22 46 52 
 Numero de Vertices: 5	Vertices: 19 25 30 46 52 
-Numero de Vertices: 4	Vertices: 19 25 46 52 
 Numero de Vertices: 3	Vertices: 21 29 48 
 Numero de Vertices: 2	Vertices: 21 37 
 Numero de Vertices: 3	Vertices: 21 39 45 
@@ -122,9 +128,27 @@ Numero de Vertices: 3	Vertices: 26 27 28
 Numero de Vertices: 3	Vertices: 29 31 48 
 Numero de Vertices: 2	Vertices: 30 36 
 Numero de Vertices: 2	Vertices: 30 44 
+Numero de Vertices: 2	Vertices: 30 53 
 Numero de Vertices: 3	Vertices: 31 43 48 
+Numero de Vertices: 2	Vertices: 33 61 
+Numero de Vertices: 2	Vertices: 35 45 
+Numero de Vertices: 2	Vertices: 35 50 
+Numero de Vertices: 3	Vertices: 37 38 41 
+Numero de Vertices: 2	Vertices: 37 40 
+Numero de Vertices: 2	Vertices: 37 60 
+Numero de Vertices: 2	Vertices: 38 62 
+Numero de Vertices: 2	Vertices: 39 59 
+Numero de Vertices: 2	Vertices: 40 58 
+Numero de Vertices: 2	Vertices: 43 51 
+Numero de Vertices: 2	Vertices: 44 47 
+Numero de Vertices: 2	Vertices: 44 54 
+Numero de Vertices: 3	Vertices: 46 51 52 
+Numero de Vertices: 2	Vertices: 47 50 
+Numero de Vertices: 2	Vertices: 49 58 
+Numero de Vertices: 2	Vertices: 52 56 
+Numero de Vertices: 2	Vertices: 54 62 
 
-Índices de aglomeração: 
+Indices de aglomeracao: 
 Vertice: 1	Indice de aglomeracao: 0.333333
 Vertice: 2	Indice de aglomeracao: 0.142857
 Vertice: 3	Indice de aglomeracao: 0.166667
@@ -188,4 +212,4 @@ Vertice: 60	Indice de aglomeracao: 0.3
 Vertice: 61	Indice de aglomeracao: 0
 Vertice: 62	Indice de aglomeracao: 0
 
-Coeficiente Médio de Aglomeração do Grafo: 0.258958
+Coeficiente Medio de Aglomeracao do Grafo: 0.258958
