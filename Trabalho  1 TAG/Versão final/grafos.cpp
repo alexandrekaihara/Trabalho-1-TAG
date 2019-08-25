@@ -20,7 +20,7 @@ void Grafo::criargrafo (Readfile *file)
     {
         grafo.push_back (new Vertice);
     }
-
+    trios.resize(sizes[0]);
     // Criacao das arestas
     for (; i < 2*sizes[2] + 2; i += 2)
     {
@@ -31,16 +31,6 @@ void Grafo::criargrafo (Readfile *file)
         grafo[file->filecontent[i + 1] - 1]->vizinhos.push_back (file->filecontent[i] - 1);
     }
 }
-
-
-void Grafo::destruirgrafo ()
-{
-    for (int i = 0; i < this->sizes[0]; i++)
-    {
-        delete grafo[i];
-    }
-}
-
 
 void Grafo::printgrafo ()
 {
@@ -58,47 +48,35 @@ void Grafo::printgrafo ()
 
 void Grafo::printgrau ()
 {
-    cout << "GRAU DOS VERTICES:\n\n";
+    cout << "Grau de cada vertice:\n";
     for(int i = 0; i < sizes[0]; i++)
     {
-        cout << "Vertice: " << (i+1) << "\tNum Vizinhos: " << grafo[i]->vizinhos.size () << endl;   
+        cout << "Vertice: " << (i+1) << "\tGrau: " << grafo[i]->vizinhos.size () << endl;   
     }
 }
 
 
 void Grafo::findmaximalclique ()
 {
+    cout << "\nCliques maximais: \n";
     // Iniciando o vetor P com todos os vértices do grafo
     vector<int> r, p(sizes[0]), x;
     for(int i = 0; i < sizes[0]; i++)
         p[i] = i;
     bronkerbosch(r, p, x);
+    cout << "\n";
 }
 
 
 void Grafo::bronkerbosch (vector<int> &r, vector<int> &p, vector<int> &x)
-{
-    // Para debugação. Imprime os vetores R, P e X na chamada atual. 
-    /*
-    cout << "Instanciação iniciada.\n";
-    cout << "R: ";
-    for(int i  = 0; i < r.size(); i++)
-        cout << r[i] << " ";
-    cout << "\nP: ";
-    for(int i  = 0; i < p.size(); i++)
-        cout << p[i] << " ";
-    cout << "\nX: ";
-    for(int i = 0; i < x.size(); i++)
-        cout << x[i] << " ";
-    cout << "\n\n";
-    // */
-    
+{   
     if(p.empty() && x.empty()){
-        cout << "Clique maximal encontrado: ";
+        cout << "Numero de Vertices: " << r.size() << "\tVertices: "; 
         for(int i = 0; i < r.size(); i++)
-            cout << r[i] << " ";
+            cout << r[i] + 1 << " ";
         cout << endl;
         return;
+        
     }
     
     for(int i = 0; i < p.size(); i++){
@@ -112,60 +90,43 @@ void Grafo::bronkerbosch (vector<int> &r, vector<int> &p, vector<int> &x)
     }
 }
 
-
-int Grafo::getindex (Vertice* vert) // Só serve pra debugar, vou apagar ela depois
+void Grafo::intersection (vector<int> &vet, vector<int> &vizinhos, vector<int> &ans)
 {
-    for(int i = 0; i < sizes[0]; i++)
-        if(vert == grafo[i])
-            return i;
-    return -1;
-}
-
-void Grafo::intersection(vector<int> &vet, vector<int> &vizinhos, vector<int> &ans){
     for(int i = 0; i < vet.size(); i++)
         for(int j = 0; j < vizinhos.size(); j++)
             if(vet[i] == vizinhos[j])
                 ans.push_back(vet[i]);
 }
 
-
-void Clique::adicionarclique (vector<int> clique)
+void Grafo::aglom ()
 {
-    subgrafos.push_back (clique);
+    double soma = 0;
+    cout << "Índices de aglomeração: " << endl;
+    for(int i = 0; i < sizes[0]; i++){
+        double indice, n = grafo[i]->vizinhos.size();
+        indice = trios[i];
+        if(n < 2)
+            indice = 0;
+        else
+            indice /= n*(n - 1);
+        soma += indice;
+        cout << "Vertice: " << (i+1) << "\tIndice de aglomeracao: " << indice << endl;   
+    }
+    cout << "\nCoeficiente Médio de Aglomeração do Grafo: " << soma/sizes[0] << endl;
 }
 
-
-void Clique::printcliques ()
+void Grafo::triosf ()
 {
-    cout << "Cliques maximais: \n\n";
-    for (int i = 0; i < subgrafos.size (); i++)
-    {
-        cout << "Numero de Vertices: " << subgrafos[i].size () << "\tVertices: "; 
-       
-        for(int j = 0; j < subgrafos[i].size (); j++)
-        {
-            cout << subgrafos[i][j] << " ";
-        }
-       
-        cout << "\n";
-    }
-}
-
-
-void Clique::findv3cliques (Grafo a)
-{
-    for (int i = 0; i < a.grafo.size (); i++)
-    {
-        a.grafo[i]->v3cliques = 0;
-    }
-
-    for (int i = 0; i < subgrafos.size (); i++)
-    {
-        if (subgrafos[i].size () == 3)
-        {
-            for (int j = 0; j < 3; j++)
-            {   
-                a.grafo[subgrafos[i][j]]->v3cliques += 1;
+    for(int i = 0; i < sizes[0]; i++){
+        for(int j = 0; j < grafo[i]->vizinhos.size(); j++){
+            int m = grafo[i]->vizinhos[j];
+            for(int k = 0; k < grafo[m]->vizinhos.size(); k++){
+                int n = grafo[m]->vizinhos[k];
+                for(int l = 0; l < grafo[n]->vizinhos.size(); l++){
+                    if( grafo[n]->vizinhos[l] == i ){
+                        trios[i]++;
+                    }
+                }
             }
         }
     }

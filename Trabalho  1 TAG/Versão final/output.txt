@@ -1,0 +1,190 @@
+Vertice: 1 | Vizinhos:  11 15 16 41 43 48
+Vertice: 2 | Vizinhos:  18 20 27 28 29 37 42 55
+Vertice: 3 | Vizinhos:  11 43 45 62
+Vertice: 4 | Vizinhos:  9 15 60
+Vertice: 5 | Vizinhos:  52
+Vertice: 6 | Vizinhos:  10 14 57 58
+Vertice: 7 | Vizinhos:  10 14 18 55 57 58
+Vertice: 8 | Vizinhos:  20 28 31 41 55
+Vertice: 9 | Vizinhos:  4 21 29 38 46 60
+Vertice: 10 | Vizinhos:  6 7 14 18 33 42 58
+Vertice: 11 | Vizinhos:  1 3 30 43 48
+Vertice: 12 | Vizinhos:  52
+Vertice: 13 | Vizinhos:  34
+Vertice: 14 | Vizinhos:  6 7 10 18 33 42 55 58
+Vertice: 15 | Vizinhos:  1 4 17 25 34 35 38 39 41 44 51 53
+Vertice: 16 | Vizinhos:  1 19 25 41 46 56 60
+Vertice: 17 | Vizinhos:  15 21 34 38 39 51
+Vertice: 18 | Vizinhos:  2 7 10 14 23 26 28 32 58
+Vertice: 19 | Vizinhos:  16 21 22 25 30 46 52
+Vertice: 20 | Vizinhos:  2 8 31 55
+Vertice: 21 | Vizinhos:  9 17 19 29 37 39 45 48 51
+Vertice: 22 | Vizinhos:  19 30 34 38 46 52
+Vertice: 23 | Vizinhos:  18
+Vertice: 24 | Vizinhos:  37 46 52
+Vertice: 25 | Vizinhos:  15 16 19 30 46 52
+Vertice: 26 | Vizinhos:  18 27 28
+Vertice: 27 | Vizinhos:  2 26 28
+Vertice: 28 | Vizinhos:  2 8 18 26 27
+Vertice: 29 | Vizinhos:  2 9 21 31 48
+Vertice: 30 | Vizinhos:  11 19 22 25 36 44 46 52 53
+Vertice: 31 | Vizinhos:  8 20 29 43 48
+Vertice: 32 | Vizinhos:  18
+Vertice: 33 | Vizinhos:  10 14 61
+Vertice: 34 | Vizinhos:  13 15 17 22 35 38 39 41 44 51
+Vertice: 35 | Vizinhos:  15 34 38 45 50
+Vertice: 36 | Vizinhos:  30
+Vertice: 37 | Vizinhos:  2 21 24 38 40 41 60
+Vertice: 38 | Vizinhos:  9 15 17 22 34 35 37 41 44 46 62
+Vertice: 39 | Vizinhos:  15 17 21 34 44 45 53 59
+Vertice: 40 | Vizinhos:  37 58
+Vertice: 41 | Vizinhos:  1 8 15 16 34 37 38 53
+Vertice: 42 | Vizinhos:  2 10 14 55 58
+Vertice: 43 | Vizinhos:  1 3 11 31 48 51
+Vertice: 44 | Vizinhos:  15 30 34 38 39 47 54
+Vertice: 45 | Vizinhos:  3 21 35 39
+Vertice: 46 | Vizinhos:  9 16 19 22 24 25 30 38 51 52 60
+Vertice: 47 | Vizinhos:  44 50
+Vertice: 48 | Vizinhos:  1 11 21 29 31 43
+Vertice: 49 | Vizinhos:  58
+Vertice: 50 | Vizinhos:  35 47
+Vertice: 51 | Vizinhos:  15 17 21 34 43 46 52
+Vertice: 52 | Vizinhos:  5 12 19 22 24 25 30 46 51 56
+Vertice: 53 | Vizinhos:  15 30 39 41
+Vertice: 54 | Vizinhos:  44 62
+Vertice: 55 | Vizinhos:  2 7 8 14 20 42 58
+Vertice: 56 | Vizinhos:  16 52
+Vertice: 57 | Vizinhos:  6 7
+Vertice: 58 | Vizinhos:  6 7 10 14 18 40 42 49 55
+Vertice: 59 | Vizinhos:  39
+Vertice: 60 | Vizinhos:  4 9 16 37 46
+Vertice: 61 | Vizinhos:  33
+Vertice: 62 | Vizinhos:  3 38 54
+
+Cliques maximais: 
+Numero de Vertices: 4	Vertices: 1 11 43 48 
+Numero de Vertices: 3	Vertices: 1 15 41 
+Numero de Vertices: 3	Vertices: 1 16 41 
+Numero de Vertices: 3	Vertices: 2 18 28 
+Numero de Vertices: 3	Vertices: 2 20 55 
+Numero de Vertices: 3	Vertices: 2 27 28 
+Numero de Vertices: 3	Vertices: 3 11 43 
+Numero de Vertices: 2	Vertices: 3 43 
+Numero de Vertices: 3	Vertices: 4 9 60 
+Numero de Vertices: 2	Vertices: 4 15 
+Numero de Vertices: 2	Vertices: 5 52 
+Numero de Vertices: 4	Vertices: 6 10 14 58 
+Numero de Vertices: 3	Vertices: 6 14 58 
+Numero de Vertices: 5	Vertices: 7 10 14 18 58 
+Numero de Vertices: 4	Vertices: 7 10 18 58 
+Numero de Vertices: 4	Vertices: 7 14 18 58 
+Numero de Vertices: 4	Vertices: 7 14 55 58 
+Numero de Vertices: 3	Vertices: 8 20 31 
+Numero de Vertices: 2	Vertices: 8 28 
+Numero de Vertices: 2	Vertices: 8 31 
+Numero de Vertices: 3	Vertices: 9 21 29 
+Numero de Vertices: 2	Vertices: 9 29 
+Numero de Vertices: 3	Vertices: 9 38 46 
+Numero de Vertices: 3	Vertices: 10 14 33 
+Numero de Vertices: 2	Vertices: 10 33 
+Numero de Vertices: 2	Vertices: 11 30 
+Numero de Vertices: 3	Vertices: 11 43 48 
+Numero de Vertices: 2	Vertices: 12 52 
+Numero de Vertices: 2	Vertices: 13 34 
+Numero de Vertices: 4	Vertices: 14 42 55 58 
+Numero de Vertices: 4	Vertices: 15 17 34 38 
+Numero de Vertices: 4	Vertices: 15 17 34 39 
+Numero de Vertices: 3	Vertices: 15 17 38 
+Numero de Vertices: 2	Vertices: 15 25 
+Numero de Vertices: 4	Vertices: 15 34 35 38 
+Numero de Vertices: 4	Vertices: 15 34 38 41 
+Numero de Vertices: 4	Vertices: 15 34 39 44 
+Numero de Vertices: 4	Vertices: 16 19 25 46 
+Numero de Vertices: 3	Vertices: 16 25 46 
+Numero de Vertices: 2	Vertices: 16 41 
+Numero de Vertices: 3	Vertices: 17 21 39 
+Numero de Vertices: 2	Vertices: 18 23 
+Numero de Vertices: 3	Vertices: 18 26 28 
+Numero de Vertices: 2	Vertices: 19 21 
+Numero de Vertices: 5	Vertices: 19 22 30 46 52 
+Numero de Vertices: 4	Vertices: 19 22 46 52 
+Numero de Vertices: 5	Vertices: 19 25 30 46 52 
+Numero de Vertices: 4	Vertices: 19 25 46 52 
+Numero de Vertices: 3	Vertices: 21 29 48 
+Numero de Vertices: 2	Vertices: 21 37 
+Numero de Vertices: 3	Vertices: 21 39 45 
+Numero de Vertices: 3	Vertices: 22 34 38 
+Numero de Vertices: 3	Vertices: 22 38 46 
+Numero de Vertices: 2	Vertices: 24 37 
+Numero de Vertices: 3	Vertices: 24 46 52 
+Numero de Vertices: 3	Vertices: 26 27 28 
+Numero de Vertices: 3	Vertices: 29 31 48 
+Numero de Vertices: 2	Vertices: 30 36 
+Numero de Vertices: 2	Vertices: 30 44 
+Numero de Vertices: 3	Vertices: 31 43 48 
+
+Índices de aglomeração: 
+Vertice: 1	Indice de aglomeracao: 0.333333
+Vertice: 2	Indice de aglomeracao: 0.142857
+Vertice: 3	Indice de aglomeracao: 0.166667
+Vertice: 4	Indice de aglomeracao: 0.333333
+Vertice: 5	Indice de aglomeracao: 0
+Vertice: 6	Indice de aglomeracao: 0.5
+Vertice: 7	Indice de aglomeracao: 0.533333
+Vertice: 8	Indice de aglomeracao: 0.2
+Vertice: 9	Indice de aglomeracao: 0.266667
+Vertice: 10	Indice de aglomeracao: 0.52381
+Vertice: 11	Indice de aglomeracao: 0.4
+Vertice: 12	Indice de aglomeracao: 0
+Vertice: 13	Indice de aglomeracao: 0
+Vertice: 14	Indice de aglomeracao: 0.5
+Vertice: 15	Indice de aglomeracao: 0.257576
+Vertice: 16	Indice de aglomeracao: 0.238095
+Vertice: 17	Indice de aglomeracao: 0.6
+Vertice: 18	Indice de aglomeracao: 0.222222
+Vertice: 19	Indice de aglomeracao: 0.52381
+Vertice: 20	Indice de aglomeracao: 0.5
+Vertice: 21	Indice de aglomeracao: 0.138889
+Vertice: 22	Indice de aglomeracao: 0.533333
+Vertice: 23	Indice de aglomeracao: 0
+Vertice: 24	Indice de aglomeracao: 0.333333
+Vertice: 25	Indice de aglomeracao: 0.533333
+Vertice: 26	Indice de aglomeracao: 0.666667
+Vertice: 27	Indice de aglomeracao: 0.666667
+Vertice: 28	Indice de aglomeracao: 0.4
+Vertice: 29	Indice de aglomeracao: 0.3
+Vertice: 30	Indice de aglomeracao: 0.25
+Vertice: 31	Indice de aglomeracao: 0.3
+Vertice: 32	Indice de aglomeracao: 0
+Vertice: 33	Indice de aglomeracao: 0.333333
+Vertice: 34	Indice de aglomeracao: 0.333333
+Vertice: 35	Indice de aglomeracao: 0.3
+Vertice: 36	Indice de aglomeracao: 0
+Vertice: 37	Indice de aglomeracao: 0.047619
+Vertice: 38	Indice de aglomeracao: 0.236364
+Vertice: 39	Indice de aglomeracao: 0.285714
+Vertice: 40	Indice de aglomeracao: 0
+Vertice: 41	Indice de aglomeracao: 0.25
+Vertice: 42	Indice de aglomeracao: 0.6
+Vertice: 43	Indice de aglomeracao: 0.333333
+Vertice: 44	Indice de aglomeracao: 0.238095
+Vertice: 45	Indice de aglomeracao: 0.166667
+Vertice: 46	Indice de aglomeracao: 0.309091
+Vertice: 47	Indice de aglomeracao: 0
+Vertice: 48	Indice de aglomeracao: 0.4
+Vertice: 49	Indice de aglomeracao: 0
+Vertice: 50	Indice de aglomeracao: 0
+Vertice: 51	Indice de aglomeracao: 0.238095
+Vertice: 52	Indice de aglomeracao: 0.244444
+Vertice: 53	Indice de aglomeracao: 0.333333
+Vertice: 54	Indice de aglomeracao: 0
+Vertice: 55	Indice de aglomeracao: 0.380952
+Vertice: 56	Indice de aglomeracao: 0
+Vertice: 57	Indice de aglomeracao: 0
+Vertice: 58	Indice de aglomeracao: 0.361111
+Vertice: 59	Indice de aglomeracao: 0
+Vertice: 60	Indice de aglomeracao: 0.3
+Vertice: 61	Indice de aglomeracao: 0
+Vertice: 62	Indice de aglomeracao: 0
+
+Coeficiente Médio de Aglomeração do Grafo: 0.258958

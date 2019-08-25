@@ -19,10 +19,6 @@ using namespace std;
 class Vertice
 {
 public:
-    int v3cliques;
-
-    double aglom;
-
     vector<int> vizinhos;
 };
 
@@ -31,6 +27,7 @@ class Grafo
 {
 public:
     vector<int> sizes;
+    vector<int> trios;
 
     vector<Vertice*> grafo;
 
@@ -55,24 +52,14 @@ public:
 
     int getindex (Vertice* vert);
 
-    void intersection(vector<int> &vet, vector<int> &vizinhos, vector<int> &ans);
+
+    void intersection (vector<int> &vet, vector<int> &vizinhos, vector<int> &ans);
+
+
+    void triosf ();
+
+
+    void aglom ();
 };
-
-
-class Clique
-{
-public:
-    vector<vector<int>> subgrafos;
-
-
-    void adicionarclique (vector<int> clique);
-
-
-    void printcliques ();
-
-
-    void findv3cliques (Grafo a);    
-};
-
 
 #endif

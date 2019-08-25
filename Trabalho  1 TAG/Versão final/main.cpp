@@ -13,7 +13,6 @@ int main ()
 {
     Readfile a;
     Grafo golfinho;
-    Clique b;
 
     a.openfile ();
     a.readfile ();
@@ -22,20 +21,8 @@ int main ()
     golfinho.printgrafo ();
     //golfinho.destruirgrafo ();
     golfinho.findmaximalclique ();
-
-    std::vector<int> v{2,5,8,11,14};
-    b.adicionarclique (v);
-
-    v = {1,2,3};
-    b.adicionarclique (v);
-
-    b.printcliques ();
-    b.findv3cliques (golfinho);
-
-    for (int i = 0; i < 3; i++)
-    {
-        cout << "numero de cliques v3 " << golfinho.grafo[b.subgrafos[1][i]]->v3cliques << endl;
-    }
+    golfinho.triosf ();
+    golfinho.aglom ();
 
     return 0;
 }
