@@ -122,11 +122,8 @@ void Grafo::triosf ()
             int m = grafo[i]->vizinhos[j];
             for(int k = 0; k < grafo[m]->vizinhos.size(); k++){
                 int n = grafo[m]->vizinhos[k];
-                for(int l = 0; l < grafo[n]->vizinhos.size(); l++){
-                    if( grafo[n]->vizinhos[l] == i ){
-                        trios[i]++;
-                    }
-                }
+                if(binary_search(grafo[n]->vizinhos.begin(), grafo[n]->vizinhos.end(), i))
+                    trios[i]++;
             }
         }
     }
