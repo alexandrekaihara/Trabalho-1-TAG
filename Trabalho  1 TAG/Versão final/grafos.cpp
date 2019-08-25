@@ -59,22 +59,26 @@ void Grafo::findmaximalclique ()
 void Grafo::bronkerbosch (vector<int> &r, vector<int> &p, vector<int> &x)
 {   
     // Detecta um clique maximal quando nao ha mais vizinhos em comum para serem analisados
-    if(p.empty() && x.empty()){
+    if (p.empty () && x.empty ()){
         cout << "Numero de Vertices: " << r.size() << "\tVertices: "; 
-        for(int i = 0; i < r.size(); i++)
+        
+        for (int i = 0; i < r.size(); i++)
             cout << r[i] + 1 << " ";
+        
         cout << endl;
         return;
-        
     }
     
     // Prepara a proxima chamada recursiva do algoritmo
     for(int i = 0; i < p.size(); i++){
         vector<int> r1 = r, p1, x1;
+
         r1.push_back(p[0]); // r1 = r união com p[0] 
         intersection(p, grafo[p[0]]->vizinhos, p1); // p1 = intersecao de p com vizinhos de p[0]
         intersection(x, grafo[p[0]]->vizinhos, x1); // x1 = intersecao de x com vizinhos de p[0]
+
         bronkerbosch(r1, p1, x1);
+
         p.erase(p.begin()); // Tira p[0] de p e o move para x para que ele nao seja considerado em outros testes de cliques maximais
         x.push_back(p[0]);
     }
@@ -83,10 +87,10 @@ void Grafo::bronkerbosch (vector<int> &r, vector<int> &p, vector<int> &x)
 // Projeta a intersecao de dois vetores em um terceiro vetor. Usado no algoritmo de Bron-Kerbosch
 void Grafo::intersection (vector<int> &vet, vector<int> &vizinhos, vector<int> &ans)
 {
-    for(int i = 0; i < vet.size(); i++)
-        for(int j = 0; j < vizinhos.size(); j++)
-            if(vet[i] == vizinhos[j])
-                ans.push_back(vet[i]);
+    for (int i = 0; i < vet.size (); i++)
+        for (int j = 0; j < vizinhos.size (); j++)
+            if (vet[i] == vizinhos[j])
+                ans.push_back (vet[i]);
 }
 
 // Mostra o algoritmo de aglomeracao de cada vertice conforme dados obtidos no vetor trios
@@ -94,20 +98,24 @@ void Grafo::aglom ()
 {
     // Soma e utilizado para calcular o coeficiente medio de aglomeracao
     double soma = 0;
-    cout << "Índices de aglomeração: " << endl;
-    for(int i = 0; i < sizes[0]; i++){
-        double indice, n = grafo[i]->vizinhos.size();
+    cout << "Indices de aglomeracao: " << endl;
+
+    for (int i = 0; i < sizes[0]; i++){
+        double indice, n = grafo[i]->vizinhos.size ();
         indice = trios[i];
-        if(n < 2) // Se n tem 1 ou 0 vizinhos, seu indice de aglomeracao e 0
+
+        if (n < 2) // Se n tem 1 ou 0 vizinhos, seu indice de aglomeracao e 0
             indice = 0;
         else
             indice /= n*(n - 1);
+
         /* Normalmente, precisaria-se multiplicar indice por 2
          * mas do jeito que trios[i] e calculado, cada triangulo fechado ja e contado duas vezes */
         soma += indice;
         cout << "Vertice: " << (i+1) << "\tIndice de aglomeracao: " << indice << endl;   
     }
-    cout << "\nCoeficiente Médio de Aglomeração do Grafo: " << soma/sizes[0] << endl;
+
+    cout << "\nCoeficiente Medio de Aglomeracao do Grafo: " << soma/sizes[0] << endl;
 }
 
 // Calcula a quantidade de trios fechados que cada vertice tem
@@ -116,12 +124,12 @@ void Grafo::triosf ()
     /* Para os vertices A, B, e C, e tomando como referencia o vertice A,
      * ambos triangulos A-B-C e A-C-B são contados. Assim, é necessario dividir o resultado por 2.
      * Essao divisao e neutralizada pela multiplicacao por 2 que e feita na hora do calculo do indice */
-    for(int i = 0; i < sizes[0]; i++){
-        for(int j = 0; j < grafo[i]->vizinhos.size(); j++){
+    for (int i = 0; i < sizes[0]; i++){
+        for (int j = 0; j < grafo[i]->vizinhos.size (); j++){
             int m = grafo[i]->vizinhos[j];
-            for(int k = 0; k < grafo[m]->vizinhos.size(); k++){
+            for (int k = 0; k < grafo[m]->vizinhos.size (); k++){
                 int n = grafo[m]->vizinhos[k];
-                if(binary_search(grafo[n]->vizinhos.begin(), grafo[n]->vizinhos.end(), i))
+                if(binary_search(grafo[n]->vizinhos.begin (), grafo[n]->vizinhos.end (), i))
                     trios[i]++;
             }
         }
