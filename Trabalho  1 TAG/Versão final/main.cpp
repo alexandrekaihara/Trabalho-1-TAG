@@ -1,13 +1,12 @@
 /** \file golfinho.cpp
  * \brief Arquivo Principal
- * \author Alexandre Mitsuru Kaihara e Felipe Xavier Barbosa da Silva
+ * \author 18/ - Alexandre Mitsuru Kaihara
+ *         18/0016326 - Felipe Xavier Barbosa da Silva
  * \since 22/08/19
  */
 // Diretiva de compilação: g++ -std=c++11 -o main main.cpp readfiles.cpp grafos.cpp
 #include "grafos.h"
 #include "readfiles.h"
-#include <iostream>
-#include <fstream>
 
 int main ()
 {

@@ -1,67 +1,66 @@
-What is happening wtf
-What is happening wtf
-Vertice: 1 | Vizinhos:  11 15 16 41 43 48
-Vertice: 2 | Vizinhos:  18 20 27 28 29 37 42 55
-Vertice: 3 | Vizinhos:  11 43 45 62
-Vertice: 4 | Vizinhos:  9 15 60
-Vertice: 5 | Vizinhos:  52
-Vertice: 6 | Vizinhos:  10 14 57 58
-Vertice: 7 | Vizinhos:  10 14 18 55 57 58
-Vertice: 8 | Vizinhos:  20 28 31 41 55
-Vertice: 9 | Vizinhos:  4 21 29 38 46 60
-Vertice: 10 | Vizinhos:  6 7 14 18 33 42 58
-Vertice: 11 | Vizinhos:  1 3 30 43 48
-Vertice: 12 | Vizinhos:  52
-Vertice: 13 | Vizinhos:  34
-Vertice: 14 | Vizinhos:  6 7 10 18 33 42 55 58
-Vertice: 15 | Vizinhos:  1 4 17 25 34 35 38 39 41 44 51 53
-Vertice: 16 | Vizinhos:  1 19 25 41 46 56 60
-Vertice: 17 | Vizinhos:  15 21 34 38 39 51
-Vertice: 18 | Vizinhos:  2 7 10 14 23 26 28 32 58
-Vertice: 19 | Vizinhos:  16 21 22 25 30 46 52
-Vertice: 20 | Vizinhos:  2 8 31 55
-Vertice: 21 | Vizinhos:  9 17 19 29 37 39 45 48 51
-Vertice: 22 | Vizinhos:  19 30 34 38 46 52
-Vertice: 23 | Vizinhos:  18
-Vertice: 24 | Vizinhos:  37 46 52
-Vertice: 25 | Vizinhos:  15 16 19 30 46 52
-Vertice: 26 | Vizinhos:  18 27 28
-Vertice: 27 | Vizinhos:  2 26 28
-Vertice: 28 | Vizinhos:  2 8 18 26 27
-Vertice: 29 | Vizinhos:  2 9 21 31 48
-Vertice: 30 | Vizinhos:  11 19 22 25 36 44 46 52 53
-Vertice: 31 | Vizinhos:  8 20 29 43 48
-Vertice: 32 | Vizinhos:  18
-Vertice: 33 | Vizinhos:  10 14 61
-Vertice: 34 | Vizinhos:  13 15 17 22 35 38 39 41 44 51
-Vertice: 35 | Vizinhos:  15 34 38 45 50
-Vertice: 36 | Vizinhos:  30
-Vertice: 37 | Vizinhos:  2 21 24 38 40 41 60
-Vertice: 38 | Vizinhos:  9 15 17 22 34 35 37 41 44 46 62
-Vertice: 39 | Vizinhos:  15 17 21 34 44 45 53 59
-Vertice: 40 | Vizinhos:  37 58
-Vertice: 41 | Vizinhos:  1 8 15 16 34 37 38 53
-Vertice: 42 | Vizinhos:  2 10 14 55 58
-Vertice: 43 | Vizinhos:  1 3 11 31 48 51
-Vertice: 44 | Vizinhos:  15 30 34 38 39 47 54
-Vertice: 45 | Vizinhos:  3 21 35 39
-Vertice: 46 | Vizinhos:  9 16 19 22 24 25 30 38 51 52 60
-Vertice: 47 | Vizinhos:  44 50
-Vertice: 48 | Vizinhos:  1 11 21 29 31 43
-Vertice: 49 | Vizinhos:  58
-Vertice: 50 | Vizinhos:  35 47
-Vertice: 51 | Vizinhos:  15 17 21 34 43 46 52
-Vertice: 52 | Vizinhos:  5 12 19 22 24 25 30 46 51 56
-Vertice: 53 | Vizinhos:  15 30 39 41
-Vertice: 54 | Vizinhos:  44 62
-Vertice: 55 | Vizinhos:  2 7 8 14 20 42 58
-Vertice: 56 | Vizinhos:  16 52
-Vertice: 57 | Vizinhos:  6 7
-Vertice: 58 | Vizinhos:  6 7 10 14 18 40 42 49 55
-Vertice: 59 | Vizinhos:  39
-Vertice: 60 | Vizinhos:  4 9 16 37 46
-Vertice: 61 | Vizinhos:  33
-Vertice: 62 | Vizinhos:  3 38 54
+Grau de cada vertice:
+Vertice: 1	Grau: 6
+Vertice: 2	Grau: 8
+Vertice: 3	Grau: 4
+Vertice: 4	Grau: 3
+Vertice: 5	Grau: 1
+Vertice: 6	Grau: 4
+Vertice: 7	Grau: 6
+Vertice: 8	Grau: 5
+Vertice: 9	Grau: 6
+Vertice: 10	Grau: 7
+Vertice: 11	Grau: 5
+Vertice: 12	Grau: 1
+Vertice: 13	Grau: 1
+Vertice: 14	Grau: 8
+Vertice: 15	Grau: 12
+Vertice: 16	Grau: 7
+Vertice: 17	Grau: 6
+Vertice: 18	Grau: 9
+Vertice: 19	Grau: 7
+Vertice: 20	Grau: 4
+Vertice: 21	Grau: 9
+Vertice: 22	Grau: 6
+Vertice: 23	Grau: 1
+Vertice: 24	Grau: 3
+Vertice: 25	Grau: 6
+Vertice: 26	Grau: 3
+Vertice: 27	Grau: 3
+Vertice: 28	Grau: 5
+Vertice: 29	Grau: 5
+Vertice: 30	Grau: 9
+Vertice: 31	Grau: 5
+Vertice: 32	Grau: 1
+Vertice: 33	Grau: 3
+Vertice: 34	Grau: 10
+Vertice: 35	Grau: 5
+Vertice: 36	Grau: 1
+Vertice: 37	Grau: 7
+Vertice: 38	Grau: 11
+Vertice: 39	Grau: 8
+Vertice: 40	Grau: 2
+Vertice: 41	Grau: 8
+Vertice: 42	Grau: 5
+Vertice: 43	Grau: 6
+Vertice: 44	Grau: 7
+Vertice: 45	Grau: 4
+Vertice: 46	Grau: 11
+Vertice: 47	Grau: 2
+Vertice: 48	Grau: 6
+Vertice: 49	Grau: 1
+Vertice: 50	Grau: 2
+Vertice: 51	Grau: 7
+Vertice: 52	Grau: 10
+Vertice: 53	Grau: 4
+Vertice: 54	Grau: 2
+Vertice: 55	Grau: 7
+Vertice: 56	Grau: 2
+Vertice: 57	Grau: 2
+Vertice: 58	Grau: 9
+Vertice: 59	Grau: 1
+Vertice: 60	Grau: 5
+Vertice: 61	Grau: 1
+Vertice: 62	Grau: 3
 
 Cliques maximais: 
 Numero de Vertices: 4	Vertices: 1 11 43 48 

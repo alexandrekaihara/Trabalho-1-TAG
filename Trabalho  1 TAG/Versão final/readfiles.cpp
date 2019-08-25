@@ -1,14 +1,10 @@
 /** \file readfiles.h
  * \brief Arquivo com a implementacao da geracao dos vertices do grafo a partir do arquivo .mtx
- * \author Alexandre Mitsuru Kaihara e Felipe Xavier Barbosa da Silva
+ * \author 18/ - Alexandre Mitsuru Kaihara
+ *         18/0016326 - Felipe Xavier Barbosa da Silva
  * \since 22/08/19
  */
 #include "readfiles.h"
-#include <fstream>
-#include <vector>
-#include <iostream>
-#include <sstream>
-#include <string>
 
 using namespace std;
 

@@ -1,17 +1,14 @@
-/** \file grafos.h
+    /** \file grafos.h
  * \brief Arquivo com a biblioteca de funcoes de manutencao do grafo
- * \author Alexandre Mitsuru Kaihara e Felipe Xavier Barbosa da Silva
+ * \author 18/ - Alexandre Mitsuru Kaihara
+ *         18/0016326 - Felipe Xavier Barbosa da Silva
  * \since 22/08/19
  */
 #ifndef GRAFOS_H_INCLUDED
 #define GRAFOS_H_INCLUDED
 
 #include "readfiles.h"
-#include <fstream>
-#include <vector>
-#include <iostream>
-#include <sstream>
-#include <string>
+#include <algorithm>
 
 using namespace std;
 

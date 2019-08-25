@@ -1,10 +1,10 @@
 /** \file grafos.cpp
  * \brief Arquivo com a implementacao da manipulacao do grafo
- * \author Alexandre Mitsuru Kaihara e Felipe Xavier Barbosa da Silva
+ * \author 18/ - Alexandre Mitsuru Kaihara
+ *         18/0016326 - Felipe Xavier Barbosa da Silva
  * \since 22/08/19
  */
 #include "grafos.h"
-#include <algorithm>
 
 // Transfere os dados pegos do arquivo para um grafo (da classe Grafo) feito com a classe Vertice
 void Grafo::criargrafo (Readfile *file)
