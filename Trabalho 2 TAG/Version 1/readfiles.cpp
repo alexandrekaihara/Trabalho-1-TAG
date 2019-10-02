@@ -9,13 +9,13 @@
 using namespace std;
 
 // Abre o arquivo soc-dolphins.mtx, e encerra o programa se a leitura for mal-sucedida
-bool Readfile::openfile ()
+bool Readfile::openfile (string file)
 {
-    this->inFile.open("grafo-CIC.mtx");
+    this->inFile.open(file);
 
     if (this->inFile.fail ())
     {
-        cout << "Nao foi possivel abrir o arquivo grafo-CIC.mtx." << endl;
+        cout << "Nao foi possivel abrir o arquivo " << file << endl;
         return false;
     }
     return true;

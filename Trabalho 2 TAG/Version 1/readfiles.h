@@ -10,6 +10,7 @@
 #include <fstream>
 #include <vector>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -22,7 +23,7 @@ public:
     vector<int> filecontent;
 
 
-    bool openfile ();
+    bool openfile (string file);
 
 
     void readfile ();

@@ -16,11 +16,17 @@ using namespace std;
 class Materia
 {
 public:
-    Materia(int codigo, vector<int> vizinhos);
+    int grauentrada;
+
+    int grauida;
 
     int codigo;
 
-    vector<int> vizinhos;
+    int creditos;
+
+    vector<Materia*> arestachegada;
+
+    vector<Materia*> arestaida;
 };
 
 // Classe utilizada para realizar operacoes com o grafo lido
@@ -29,13 +35,11 @@ class Grafo
 public:
     vector<Materia*> grafo;
     
-    void criargrafo ();  
+    void criargrafo (Readfile* a);  
 
     void printgrafo ();
-    
-    void intersection ();
 
-    void DepthFirstSearch ();
+    void destruirgrafo ();
 
 };
 
