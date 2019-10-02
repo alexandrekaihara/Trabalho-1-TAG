@@ -22,10 +22,10 @@ int main ()
 
     fluxo.criargrafo (&a);
     ord.exec (&fluxo);
-    fluxo.printgrafo ();
+    ord.printordenacao ();
+    fluxo.destruirgrafo ();
 
-
-
+    fluxo.criargrafo (&a);
     fluxo.destruirgrafo ();
 
     return 0;

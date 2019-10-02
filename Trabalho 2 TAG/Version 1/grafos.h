@@ -37,6 +37,8 @@ public:
     
     void criargrafo (Readfile* a);  
 
+    void grafoinverso ();
+
     void printgrafo ();
 
     void destruirgrafo ();

@@ -1,5 +1,5 @@
-/** \file ordenacaotopolagica.h
- * \brief Arquivo com a biblioteca de funcoes de manutencao do grafo
+/** \file caminhocritico.h
+ * \brief Arquivo que implementa o caminho critico de um grafo
  * \author 18/0029690 - Alexandre Mitsuru Kaihara
  *         18/0016326 - Felipe Xavier Barbosa da Silva
  * \since 22/08/19
@@ -16,17 +16,19 @@ using namespace std;
 #include "readfiles.h"
 
 
-class ordenacaotopologica
+class caminhocritico
 {
 public:
     void exec (Grafo* grafo);
 
     void intersection (vector<Materia*> grafo);
 
-    void printordenacao ();
+    void breadthfirstsearch ();
+
+    void printcaminho ();
 
 private:
-    vector<Materia*> ordenacao;
+    vector<Materia*> caminho;
 };
 
 

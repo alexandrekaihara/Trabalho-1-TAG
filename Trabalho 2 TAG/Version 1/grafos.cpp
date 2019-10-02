@@ -42,6 +42,14 @@ void Grafo::criargrafo (Readfile* a)
         this->grafo[i]->grauida = this->grafo[i]->arestaida.size ();
 }
 
+
+// Gera o grafo inverso
+void Grafo::grafoinverso ()
+{
+    
+}
+
+
 // Printa os vertices e vizinhos do grafo
 void Grafo::printgrafo ()
 {
@@ -66,4 +74,5 @@ void Grafo::destruirgrafo ()
 {
     for (int i = 0; i < this->grafo.size (); i++)
         delete this->grafo[i];
+    grafo.clear ();
 }
