@@ -1,13 +1,17 @@
 #include "caminhocritico.h"
 
 
-void caminhocritico::exec ()
+void caminhocritico::exec (Grafo* grafo)
 {}
 
 
-void caminhocritico::intersection ()
+void caminhocritico::intersection (vector<Materia*> grafo)
 {}
 
 
 void caminhocritico::breadthfirstsearch ()
+{}
+
+
+void caminhocritico::printcaminho ()
 {}

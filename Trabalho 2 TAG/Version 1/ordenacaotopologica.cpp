@@ -36,20 +36,9 @@ void ordenacaotopologica::exec (Grafo* grafo)
 
     while(!fila.empty ())
     {
-        // Diminui o grau de chegada e retira o prerequisito das materias vinculadas a materia que sera retirada
+        // Diminui o grau de chegada 
         for (int i = 0; i < fila[0]->grauida; i++)
-        {    
-            // Retira a materia como prerequisito
-            for(int j = 0; j < fila[0]->arestaida[i]->grauentrada; j++)
-            {        
-                if(fila[0] == fila[0]->arestaida[i]->arestachegada[j]){
-                    fila[0]->arestaida[i]->arestachegada.erase(fila[0]->arestaida[i]->arestachegada.begin () + j);
-                    break;
-                }
-            }
-            // Diminui o grau de prerequisitos
             fila[0]->arestaida[i]->grauentrada--;
-        }
 
         // Adiciona a materia na ordenacao topologica e retira da fila
         ordenacao.push_back (fila[0]);

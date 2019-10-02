@@ -4,8 +4,8 @@
  *         18/0016326 - Felipe Xavier Barbosa da Silva
  * \since 22/08/19
  */
-#ifndef ORDENACAOTOPOLOGICA_H_INCLUDED
-#define ORDENACAOTOPOLOGICA_H_INCLUDED
+#ifndef CAMINHOCRITICO_H_INCLUDED
+#define CAMINHOCRITICO_H_INCLUDED
 
 
 using namespace std;

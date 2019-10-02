@@ -25,7 +25,6 @@ public:
 
     void printordenacao ();
 
-private:
     vector<Materia*> ordenacao;
 };
 
