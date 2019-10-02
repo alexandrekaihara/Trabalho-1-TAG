@@ -32,7 +32,7 @@ void ordenacaotopologica::exec (Grafo* grafo)
     vector<Materia*> fila (grafo->grafo);
 
     // Ordenacao inicial
-    sort (grafo->grafo.begin (), grafo->grafo.end (), compare);
+    sort (fila.begin (), fila.end (), compare);
 
     while(!fila.empty ())
     {
@@ -56,7 +56,7 @@ void ordenacaotopologica::exec (Grafo* grafo)
         fila.erase(fila.begin ());
 
         // Ordena a fila de acordo com a funcao compare
-        sort (grafo->grafo.begin (), grafo->grafo.end (), compare);
+        sort (fila.begin (), fila.end (), compare);
     }
 }
 
@@ -64,5 +64,5 @@ void ordenacaotopologica::exec (Grafo* grafo)
 void ordenacaotopologica::printordenacao ()
 {
     for(int i = 0; i < ordenacao.size (); i++)
-        cout << "COD: " << ordenacao[i]->codigo << " Creditos: " << ordenacao[i]->creditos << "\n";
+        cout << "NOME: " << ordenacao[i]->nome << " COD: " << ordenacao[i]->codigo << " Creditos: " << ordenacao[i]->creditos << "\n";
 }

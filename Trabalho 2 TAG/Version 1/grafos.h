@@ -24,6 +24,8 @@ public:
 
     int creditos;
 
+    string nome;
+
     vector<Materia*> arestachegada;
 
     vector<Materia*> arestaida;

@@ -22,6 +22,7 @@ void Grafo::criargrafo (Readfile* a)
     for (int i = 0; i < (a->filecontent.size () - 1) ; i++)
     {
         this->grafo.push_back (new Materia ());
+        this->grafo[k]->nome = a->nomes[k];
         this->grafo[k]->creditos    = a->filecontent[i];
         this->grafo[k]->codigo      = a->filecontent[i + 1];
         this->grafo[k]->grauentrada = a->filecontent[i + 2];
@@ -43,32 +44,6 @@ void Grafo::criargrafo (Readfile* a)
 }
 
 
-// Gera o grafo inverso
-void Grafo::grafoinverso ()
-{
-    
-}
-
-
-// Printa os vertices e vizinhos do grafo
-void Grafo::printgrafo ()
-{
-    for (int i = 0; i < this->grafo.size (); i++)
-    {
-        cout << "Cod: " << this->grafo[i]->codigo << " Credito: " << this->grafo[i]->creditos << " Grau: " << this->grafo[i]->grauentrada << " ArestaC: ";
-        for(int j = 0; j < this->grafo[i]->arestachegada.size (); j++)
-        {
-            cout << this->grafo[i]->arestachegada[j]->codigo << " ";
-        }
-        cout << " ArestaI: ";
-        for(int j = 0; j < this->grafo[i]->arestaida.size (); j++)
-        {
-            cout << this->grafo[i]->arestaida[j]->codigo << " ";
-        }
-        cout << "\n";
-    }
-}
-
 // Realiza uma busca em profundidade no grafo
 void Grafo::destruirgrafo ()
 {
@@ -76,3 +51,35 @@ void Grafo::destruirgrafo ()
         delete this->grafo[i];
     grafo.clear ();
 }
+
+
+// Gera o grafo inverso
+void Grafo::grafoinverso ()
+{
+    for (int i = 0; i < grafo.size (); i++)
+    {
+        grafo[i]->arestachegada.swap (grafo[i]->arestaida);
+    }
+}
+
+
+// Printa os vertices e vizinhos do grafo
+void Grafo::printgrafo ()
+{
+    cout << "\n";
+    for (int i = 0; i < this->grafo.size (); i++)
+    {
+        cout << "Nome: " << this->grafo[i]->nome << " Cod: " << this->grafo[i]->codigo << " Credito: " << this->grafo[i]->creditos << " Grau: " << this->grafo[i]->grauentrada << " Prereq: ";
+        for(int j = 0; j < this->grafo[i]->arestachegada.size (); j++)
+        {
+            cout << this->grafo[i]->arestachegada[j]->nome << " ";
+        }
+        //cout << " ArestaI: ";
+        //for(int j = 0; j < this->grafo[i]->arestaida.size (); j++)
+        //{
+        //    cout << this->grafo[i]->arestaida[j]->codigo << " ";
+        //}
+        cout << "\n";
+    }
+}
+

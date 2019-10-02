@@ -26,6 +26,12 @@ void Readfile::readfile ()
 {
     string temp;
     string::size_type sz;
+
+    for(int i = 0; i < 34; i++)
+    {
+        inFile >> temp;
+        this->nomes.push_back (temp);
+    }
     
     while(!inFile.eof())
     {

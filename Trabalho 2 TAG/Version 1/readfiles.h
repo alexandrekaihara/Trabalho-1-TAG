@@ -22,6 +22,8 @@ public:
 
     vector<int> filecontent;
 
+    vector<string> nomes;
+
 
     bool openfile (string file);
 

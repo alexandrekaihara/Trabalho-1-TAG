@@ -26,6 +26,7 @@ int main ()
     fluxo.destruirgrafo ();
 
     fluxo.criargrafo (&a);
+    fluxo.printgrafo();
     fluxo.destruirgrafo ();
 
     return 0;
