@@ -5,7 +5,6 @@
  * \since 22/08/19
  */
 
-
 using namespace std;
 
 
@@ -17,7 +16,7 @@ using namespace std;
 // Transfere os dados pegos do arquivo para um grafo (da classe Grafo) feito com a classe Vertice
 void Grafo::criargrafo (Readfile* a)
 {   
-    // Cria todos os vertices com
+    // Cria todos os vertices do grafo
     int k = 0;
     for (int i = 0; i < (a->filecontent.size () - 1) ; i++)
     {
@@ -51,35 +50,3 @@ void Grafo::destruirgrafo ()
         delete this->grafo[i];
     grafo.clear ();
 }
-
-
-// Gera o grafo inverso
-void Grafo::grafoinverso ()
-{
-    for (int i = 0; i < grafo.size (); i++)
-    {
-        grafo[i]->arestachegada.swap (grafo[i]->arestaida);
-    }
-}
-
-
-// Printa os vertices e vizinhos do grafo
-void Grafo::printgrafo ()
-{
-    cout << "\n";
-    for (int i = 0; i < this->grafo.size (); i++)
-    {
-        cout << "Nome: " << this->grafo[i]->nome << " Cod: " << this->grafo[i]->codigo << " Credito: " << this->grafo[i]->creditos << " Grau: " << this->grafo[i]->grauentrada << " Prereq: ";
-        for(int j = 0; j < this->grafo[i]->arestachegada.size (); j++)
-        {
-            cout << this->grafo[i]->arestachegada[j]->nome << " ";
-        }
-        //cout << " ArestaI: ";
-        //for(int j = 0; j < this->grafo[i]->arestaida.size (); j++)
-        //{
-        //    cout << this->grafo[i]->arestaida[j]->codigo << " ";
-        //}
-        cout << "\n";
-    }
-}
-

@@ -21,10 +21,6 @@ class ordenacaotopologica
 public:
     void exec (Grafo* grafo);
 
-    void intersection (vector<Materia*> grafo);
-
-    void printordenacao ();
-
     vector<Materia*> ordenacao;
 };
 

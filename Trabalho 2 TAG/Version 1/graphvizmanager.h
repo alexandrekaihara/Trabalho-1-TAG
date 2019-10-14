@@ -1,4 +1,4 @@
-    /** \file grafos.h
+/** \file graphvizmanager.h
  * \brief Arquivo com a biblioteca de funcoes de manutencao do grafo
  * \author 18/0029690 - Alexandre Mitsuru Kaihara
  *         18/0016326 - Felipe Xavier Barbosa da Silva
@@ -22,9 +22,11 @@ public:
     void generategraph (Grafo* grafo);
 
     void generateordenation (vector<Materia*> ordenacao);
+
+    void generatepath (vector<Materia*> caminho, string str);
 };
 
-
+// Conversao de string para int e vice-versa
 class string_cvt
 {
 public:

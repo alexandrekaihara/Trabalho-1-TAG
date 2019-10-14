@@ -10,26 +10,14 @@
 
 using namespace std;
 
-
 #include <algorithm>
 #include "grafos.h"
 #include "readfiles.h"
 
+void calcular_caminhoscriticos(vector<Materia*> fila);
 
-class caminhocritico
-{
-public:
-    void exec (Grafo* grafo);
+void mostrar_caminhoscriticos(Grafo* grafo);
 
-    void intersection (vector<Materia*> grafo);
-
-    void breadthfirstsearch ();
-
-    void printcaminho ();
-
-private:
-    vector<Materia*> caminho;
-};
-
+void gerar_caminhoscriticos(vector<Materia*> fila, int num);
 
 #endif

@@ -4,7 +4,7 @@
  *         18/0016326 - Felipe Xavier Barbosa da Silva
  * \since 22/08/19
  */
-// Diretiva de compilação: g++ -std=c++11 -o main main.cpp readfiles.cpp grafos.cpp ordenacaotopologica.cpp caminhocritico.cpp graphvizmanager.cpp
+// Diretiva de compilação: g++ -std=c++11 -o main main.cpp readfiles.cpp grafos.cpp graphvizmanager.cpp ordenacaotopologica.cpp caminhocritico.cpp
 #include "grafos.h"
 #include "readfiles.h"
 #include "caminhocritico.h"
@@ -24,11 +24,14 @@ int main ()
     a.readfile  ();
     a.closefile ();
 
+    printf("Curso: Ciencia da Computacao\n");
+    
     fluxo.criargrafo (&a);
     ord.exec (&fluxo);
     graph.generateordenation (ord.ordenacao);
-    fluxo.destruirgrafo ();
-
+    gerar_caminhoscriticos(ord.ordenacao, 2);
+    fluxo.destruirgrafo (); 
+    
     fluxo.criargrafo (&a);
     graph.generategraph(&fluxo);
     fluxo.destruirgrafo ();
