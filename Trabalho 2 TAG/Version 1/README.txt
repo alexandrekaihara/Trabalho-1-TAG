@@ -10,4 +10,4 @@ Autores:
 Trabalho 2
 
 -Diretiva de compilacao utilizada:
-	g++ -std=c++11 -o main main.cpp readfiles.cpp grafos.cpp
+	g++ -std=c++11 -o main main.cpp readfiles.cpp grafos.cpp graphvizmanager.cpp caminhocritico.cpp ordenacaotopologica.cpp

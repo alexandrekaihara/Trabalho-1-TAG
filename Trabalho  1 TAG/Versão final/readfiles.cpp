@@ -29,7 +29,7 @@ void Readfile::readfile ()
     
     while(!inFile.eof())
     {
-        inFile >> temp;
+        getline (file, aux); 
         filecontent.push_back (stoi(temp, &sz, 10));
     }
 }
