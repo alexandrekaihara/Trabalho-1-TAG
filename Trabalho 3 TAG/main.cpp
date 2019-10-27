@@ -5,6 +5,8 @@
  * \since 26/10/19
  */
 
+// Para compilar, use: g++ main.cpp -o tag
+
 using namespace std;
 
 #include <vector>
